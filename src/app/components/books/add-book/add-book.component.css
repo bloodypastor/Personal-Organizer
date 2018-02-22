@@ -1,0 +1,19 @@
+.card {
+    background-color: #8b5d5d;
+    border-radius: 10px;
+}
+.btn, .btn-large {
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #474645;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+}
+
+.btn, .btn-large, .btn-flat {
+    border: none;
+    border-radius: 5px;
+}

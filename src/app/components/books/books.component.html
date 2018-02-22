@@ -1,0 +1,40 @@
+<div class="container">
+    <app-add-book></app-add-book>
+
+  <div *ngIf="books?.length > 0; else noBooks">
+    <ul *ngFor="let book of books" class="collection">
+      <li class="collection-item"> 
+        <strong>{{book.author}}</strong> - {{book.title}} <em>( {{book.genre}} )</em> 
+
+        <a class="secondary-content">
+            <i (click)="editBook($event, book)" class="fa fa-pencil"></i>
+            <i *ngIf="editState && bookToEdit.id == book.id" (click)="clearState()" class="fa fa-compress"></i>
+        </a>
+        
+      <div *ngIf="editState && bookToEdit.id == book.id">
+        <form (ngSubmit)="updateBook(book)">
+          <div class="row">           
+            <div class="input-field col s12">
+              <input type="text" placeholder="Author" [(ngModel)]="book.author" 
+              name="author">
+            </div>
+          <div class="input-field col s12">
+              <input type="text" placeholder="Title" [(ngModel)]="book.title" name="title">
+          </div>
+          <div class="input-field col s12">
+              <input type="text" placeholder="Genre" [(ngModel)]="book.genre" name="genre">
+          </div>
+          <input type="submit" value="Update Book" class="btn update">
+          <button (click)="deleteBook($event, book)" class="btn delete">Delete Book</button>
+          </div>
+        </form>
+      </div>
+      </li>
+    </ul>
+  </div>
+
+  <ng-template #noBooks>
+    <hr>  
+    <h5>There are no books to list</h5>
+  </ng-template>
+</div>

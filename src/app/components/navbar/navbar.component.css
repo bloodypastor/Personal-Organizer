@@ -1,0 +1,20 @@
+body {
+    background: #413838;
+}
+.btn, .btn-large {
+    border-radius: 4px;
+    width: 20em;
+    text-decoration: none;
+    color: #fff;
+    background-color: #7b6e77;
+    text-align: center;
+    letter-spacing: 0
+}
+
+.login, .register {
+    margin-bottom: 5px;
+    width: 100px;
+    height: 30px;
+    color: #222;
+    background-color: #fff;
+}

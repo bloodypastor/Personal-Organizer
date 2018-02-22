@@ -1,0 +1,24 @@
+.card {
+    background: #857979;
+    color: #fff;
+    border-radius: 10px;
+    border: 1px solid #857979;
+}
+
+.collection .collection-item {
+    background-color: #3d3c3c;
+    color: #fff;
+    border: 1px solid #857979;
+    border-radius: 5px;
+    line-height: 1.5rem;
+    padding: 10px 20px;
+    margin: 0;
+}
+.update {
+    color: #5a5454;
+    background-color: #E2D04E;
+}
+.delete {
+    color: #c7b9b9;
+    background-color: #b24141;
+}
